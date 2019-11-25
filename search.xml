@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>My First Blog</title>
-      <link href="/2019/11/25/first/"/>
-      <url>/2019/11/25/first/</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><pre><code>第一次写博客，不知道该写些什么东西，就把自己看到的Markdown基础操作记录了一下   作为一名已经大二了但却什么都不太会的计算机专业的学生，我感到很慌，没有出彩的成绩，   也没有傲人的奖状，有的只有上课时的一脸懵逼，万分惭愧，为此，我想利用写博客的机会   来巩固一下自己所学的一些知识和一些疑惑的解答。祝愿我能成为更好的自己吧！加油</code></pre><h2 id="Markdown基础学习"><a href="#Markdown基础学习" class="headerlink" title="Markdown基础学习"></a>Markdown基础学习</h2><blockquote><h4 id="1-MarkDown中的语法规则"><a href="#1-MarkDown中的语法规则" class="headerlink" title="1. MarkDown中的语法规则"></a>1. MarkDown中的语法规则</h4><blockquote><ul><li>MarkDown的标题<ul><li>使用[^============和———]:”=”为一级标题，“-”为二级标题            </li><li>使用“#”标记</li></ul></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>MarkDown的段落      <ul><li>段落的换行使用两个以上的空格加回车(未生效)或者空一行</li></ul></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>MarkDown字体<br><em>斜体</em><br><em>斜体</em><br><strong>粗体</strong><br><strong>粗体</strong><br><strong><em>粗斜体</em></strong><br><strong><em>粗斜体</em></strong></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>分割线</li></ul></blockquote></blockquote><blockquote><blockquote><blockquote><ul><li>有以下几种方式（字符大于等于三）</li><li><hr></li><li><hr><ul><li><hr></li><li><a href="[]">- - -</a></li><li><a href="[]">————</a></li></ul></li></ul></blockquote></blockquote></blockquote><blockquote><blockquote><ul><li>删除线   <ul><li>在要删除的文字两端加上两个波浪线<pre><code>~~jk~~        </code></pre></li></ul></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>下划线<ul><li>通过HTML的<u>u标签</u>实现</li></ul></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>脚注<ul><li>这是要注明的文字。<br>  ^[注释]</li></ul></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>列表    <ul><li>无序列表用 * 、+ 、-</li><li>有序列表 数字加点</li><li>列表嵌套 子列表前加四个空格</li></ul></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>区块</li></ul></blockquote></blockquote><blockquote><blockquote><blockquote><p>列表内使用区块加三个空格</p></blockquote></blockquote></blockquote><blockquote><blockquote><blockquote><p>1</p></blockquote></blockquote></blockquote><blockquote><blockquote><blockquote><p>2</p></blockquote></blockquote></blockquote><blockquote><blockquote><ul><li>MarkDown代码<ul><li>如果是段落上的一个函数或片段的代码可以用反引号将他包起来</li><li>代码区块使用<b>4空格</b>或<b>一个制表符</b></li><li>也可以用‘‘‘内容‘‘‘包裹并指定一种语言（也可以不指定）</li></ul></li></ul></blockquote></blockquote><pre><code>&lt;?php        echo &apos;123&apos;;        function test(){            echo &apos;test&apos;        }‘‘‘javascript$(document).ready(function(){    alert(&apos;Hello&apos;);});‘‘‘</code></pre><blockquote><blockquote><ul><li>MarkDown链接<ul><li>链接名称+链接地址  [name]+(url)<br><a href="https://www.baidu.com" target="_blank" rel="noopener">baidu</a></li><li>直接使用<url><br><a href="https:www.bilibili.com" target="_blank" rel="noopener">https:www.bilibili.com</a></li><li>高级链接<br>&nbsp;&nbsp;可以用变量代替网址,文档末尾附带变量地址<br><a href="https:www.baidu.com" target="_blank" rel="noopener">Baidu</a></li></ul></li></ul></blockquote></blockquote><pre><code>‘‘‘[Baidu][1][1]:https:www.baidu.com‘‘‘</code></pre><blockquote><blockquote><ul><li>MarkDown图片   </li></ul></blockquote></blockquote><ol><li><p>使用时</p><p>![alt 属性文本]（地址）<br>![alt 属性文本]（地址 “可选标题”）        </p></li><li><p>实践<br>![Baidu](<a href="https://www.baidu.com/img/bd_logo1.png?where=super" target="_blank" rel="noopener">https://www.baidu.com/img/bd_logo1.png?where=super</a> “Baidu”)</p></li><li><p>可以用变量代替图片</p></li><li><p>如果要指定图片大小用img标签<br>   下图为img标签效果宽度100dp</p><img width="100dp" src="https://www.baidu.com/img/bd_logo1.png?where=super"/></li></ol><blockquote><blockquote><ul><li>MarkDown表格   </li></ul></blockquote></blockquote><pre><code>语法格式：   | 表头  | 表头  || ----  | ----  || 单元格| 单元格|</code></pre><table><thead><tr><th>表头</th><th>表头</th></tr></thead><tbody><tr><td>单元格</td><td>单元格</td></tr><tr><td>单元格</td><td>单元格</td></tr><tr><td>单元格</td><td>单元格</td></tr><tr><td>单元格</td><td>单元格</td></tr></tbody></table><blockquote><blockquote><ul><li>高级技巧<ul><li>支持html元素：kbd b i em sup sub br</li><li>转义特殊符号前加\ <br><kbd>1</kbd>+<kbd>1</kbd>=<kbd>2</kbd><br><b>b</b><br><i>i</i><br><em>em</em><br/>9<sup>sup</sup><br>8<sub>sub</sub></li></ul></li></ul></blockquote></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> MarkDown语法 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MarkDown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Java GUI中组件布局问题</title>
       <link href="/2019/11/25/second/"/>
       <url>/2019/11/25/second/</url>
@@ -48,6 +23,31 @@
             <tag> Java </tag>
             
             <tag> GUI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>My First Blog</title>
+      <link href="/2019/11/25/first/"/>
+      <url>/2019/11/25/first/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><pre><code>第一次写博客，不知道该写些什么东西，就把自己看到的Markdown基础操作记录了一下   作为一名已经大二了但却什么都不太会的计算机专业的学生，我感到很慌，没有出彩的成绩，   也没有傲人的奖状，有的只有上课时的一脸懵逼，万分惭愧，为此，我想利用写博客的机会   来巩固一下自己所学的一些知识和一些疑惑的解答。祝愿我能成为更好的自己吧！加油</code></pre><h2 id="Markdown基础学习"><a href="#Markdown基础学习" class="headerlink" title="Markdown基础学习"></a>Markdown基础学习</h2><blockquote><h4 id="1-MarkDown中的语法规则"><a href="#1-MarkDown中的语法规则" class="headerlink" title="1. MarkDown中的语法规则"></a>1. MarkDown中的语法规则</h4><blockquote><ul><li>MarkDown的标题<ul><li>使用[^============和———]:”=”为一级标题，“-”为二级标题            </li><li>使用“#”标记</li></ul></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>MarkDown的段落      <ul><li>段落的换行使用两个以上的空格加回车(未生效)或者空一行</li></ul></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>MarkDown字体<br><em>斜体</em><br><em>斜体</em><br><strong>粗体</strong><br><strong>粗体</strong><br><strong><em>粗斜体</em></strong><br><strong><em>粗斜体</em></strong></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>分割线</li></ul></blockquote></blockquote><blockquote><blockquote><blockquote><ul><li>有以下几种方式（字符大于等于三）</li><li><hr></li><li><hr><ul><li><hr></li><li><a href="[]">- - -</a></li><li><a href="[]">————</a></li></ul></li></ul></blockquote></blockquote></blockquote><blockquote><blockquote><ul><li>删除线   <ul><li>在要删除的文字两端加上两个波浪线<pre><code>~~jk~~        </code></pre></li></ul></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>下划线<ul><li>通过HTML的<u>u标签</u>实现</li></ul></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>脚注<ul><li>这是要注明的文字。<br>  ^[注释]</li></ul></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>列表    <ul><li>无序列表用 * 、+ 、-</li><li>有序列表 数字加点</li><li>列表嵌套 子列表前加四个空格</li></ul></li></ul></blockquote></blockquote><blockquote><blockquote><ul><li>区块</li></ul></blockquote></blockquote><blockquote><blockquote><blockquote><p>列表内使用区块加三个空格</p></blockquote></blockquote></blockquote><blockquote><blockquote><blockquote><p>1</p></blockquote></blockquote></blockquote><blockquote><blockquote><blockquote><p>2</p></blockquote></blockquote></blockquote><blockquote><blockquote><ul><li>MarkDown代码<ul><li>如果是段落上的一个函数或片段的代码可以用反引号将他包起来</li><li>代码区块使用<b>4空格</b>或<b>一个制表符</b></li><li>也可以用‘‘‘内容‘‘‘包裹并指定一种语言（也可以不指定）</li></ul></li></ul></blockquote></blockquote><pre><code>&lt;?php        echo &apos;123&apos;;        function test(){            echo &apos;test&apos;        }‘‘‘javascript$(document).ready(function(){    alert(&apos;Hello&apos;);});‘‘‘</code></pre><blockquote><blockquote><ul><li>MarkDown链接<ul><li>链接名称+链接地址  [name]+(url)<br><a href="https://www.baidu.com" target="_blank" rel="noopener">baidu</a></li><li>直接使用<url><br><a href="https:www.bilibili.com" target="_blank" rel="noopener">https:www.bilibili.com</a></li><li>高级链接<br>&nbsp;&nbsp;可以用变量代替网址,文档末尾附带变量地址<br><a href="https:www.baidu.com" target="_blank" rel="noopener">Baidu</a></li></ul></li></ul></blockquote></blockquote><pre><code>‘‘‘[Baidu][1][1]:https:www.baidu.com‘‘‘</code></pre><blockquote><blockquote><ul><li>MarkDown图片   </li></ul></blockquote></blockquote><ol><li><p>使用时</p><p>![alt 属性文本]（地址）<br>![alt 属性文本]（地址 “可选标题”）        </p></li><li><p>实践<br>![Baidu](<a href="https://www.baidu.com/img/bd_logo1.png?where=super" target="_blank" rel="noopener">https://www.baidu.com/img/bd_logo1.png?where=super</a> “Baidu”)</p></li><li><p>可以用变量代替图片</p></li><li><p>如果要指定图片大小用img标签<br>   下图为img标签效果宽度100dp</p><img width="100dp" src="https://www.baidu.com/img/bd_logo1.png?where=super"/></li></ol><blockquote><blockquote><ul><li>MarkDown表格   </li></ul></blockquote></blockquote><pre><code>语法格式：   | 表头  | 表头  || ----  | ----  || 单元格| 单元格|</code></pre><table><thead><tr><th>表头</th><th>表头</th></tr></thead><tbody><tr><td>单元格</td><td>单元格</td></tr><tr><td>单元格</td><td>单元格</td></tr><tr><td>单元格</td><td>单元格</td></tr><tr><td>单元格</td><td>单元格</td></tr></tbody></table><blockquote><blockquote><ul><li>高级技巧<ul><li>支持html元素：kbd b i em sup sub br</li><li>转义特殊符号前加\ <br><kbd>1</kbd>+<kbd>1</kbd>=<kbd>2</kbd><br><b>b</b><br><i>i</i><br><em>em</em><br/>9<sup>sup</sup><br>8<sub>sub</sub></li></ul></li></ul></blockquote></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> MarkDown语法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MarkDown </tag>
             
         </tags>
       
