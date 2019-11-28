@@ -4,25 +4,25 @@
   
     
     <entry>
-      <title>Java GUI中组件布局问题</title>
-      <link href="/2019/11/25/second/"/>
-      <url>/2019/11/25/second/</url>
+      <title>Android中Activity和AppCompatActivity的区别</title>
+      <link href="/2019/11/28/third/"/>
+      <url>/2019/11/28/third/</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><pre><code>在学习了java gui后自己做了一个简易计算器程序，在组件布局时，很多组件的大小和位置  不够理想，使得整体布局不堪入目，后来通过一系列调整终于能勉强能看。</code></pre><ul><li><p>对于组件（jcomponents）的大小而言，在布局管理器中直接使用<br>  <u>setSize(int w,int h)</u>是无效的，可以看出在实际显示时组件并未能如我们所期望的一样大小，<br>  这时我们如果必须改变组件大小，则要使用<u>setPreferredSize(Dimension d)^[设置组件大小的首选项]</u>通过传递Dimension<br>  参数来改变组件的大小。</p><hr></li><li><p>当然在没有布局管理器的情况下可以使用setSize()函数，例如在setLayout(null)时。此外，也可以使用setBounds(int x,int y,int w,int h)<br>  来指定具体位置。</p><hr></li><li><p>java gui默认创建的布局中文字都偏小，可以使用setFont(Font font)函数来解决这个问题，对于有多个同类组件要统一文字格式时可以使用<br>  一个自定义类来对其赋值，避免重复创建多个匿名font对象（虽然java回收器会自动回收）。   </p></li></ul><pre><code>public class myFont{    public static void setmyFont(JComponent jComponent){        Font f=new Font(&quot;字体&quot;，style(int),size(int));    }} 在使用的类中调用该类的静态方法    eg:    for(int i=0;i&lt;15;i++){        myFont.setmyFont(jButton[i]);    }可以对上面十五个按钮的字体进行更改</code></pre><ul><li><p>在编写gui使用swing时,底层JFrame有一个getComponents()函数，并不能用其获取当前框架类组件数组，</p><p>  因为其返回值为Component []型，Component是与菜单不相关的 Abstract Window Toolkit 组件的抽象超类</p><p>  直接扩展类 Component 来创建一个轻量级组件。轻量级组件是与本机不透明窗口不相关的组件；而JComponent</p><p>  类就是swing包中由Component抽象类的扩展；Component属于awt包，Jcomponent属于swing包</p></li></ul>]]></content>
+        <content type="html"><![CDATA[<h3 id="AppCompatActivity"><a href="#AppCompatActivity" class="headerlink" title="AppCompatActivity"></a>AppCompatActivity</h3><ul><li><p>继承自<strong>FragmentActivityJB</strong>, <strong>FragmentActivityJB</strong>又继承于<strong>BaseFragmentActivityHoneycomb</strong>,</p><p>……最后一直继承到<strong>Activity</strong>,因此<strong>AppCompatActivity</strong>是<strong>Activity</strong>衍生出来的一个子类</p><p><strong>AppCompatActivity</strong>会默认给一个标题栏，此外也会包含一些新的特性</p></li></ul><hr><ul><li>持续更新中……</li></ul>]]></content>
       
       
       <categories>
           
-          <category> JAVA图形化编程 </category>
+          <category> Android学习笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Java </tag>
+            <tag> Android </tag>
             
-            <tag> GUI </tag>
+            <tag> 学习 </tag>
             
         </tags>
       
@@ -48,6 +48,33 @@
         <tags>
             
             <tag> MarkDown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java GUI中组件布局问题</title>
+      <link href="/2019/11/25/second/"/>
+      <url>/2019/11/25/second/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><pre><code>在学习了java gui后自己做了一个简易计算器程序，在组件布局时，很多组件的大小和位置  不够理想，使得整体布局不堪入目，后来通过一系列调整终于能勉强能看。</code></pre><ul><li><p>对于组件（jcomponents）的大小而言，在布局管理器中直接使用<br>  <u>setSize(int w,int h)</u>是无效的，可以看出在实际显示时组件并未能如我们所期望的一样大小，<br>  这时我们如果必须改变组件大小，则要使用<u>setPreferredSize(Dimension d)^[设置组件大小的首选项]</u>通过传递Dimension<br>  参数来改变组件的大小。</p><hr></li><li><p>当然在没有布局管理器的情况下可以使用setSize()函数，例如在setLayout(null)时。此外，也可以使用setBounds(int x,int y,int w,int h)<br>  来指定具体位置。</p><hr></li><li><p>java gui默认创建的布局中文字都偏小，可以使用setFont(Font font)函数来解决这个问题，对于有多个同类组件要统一文字格式时可以使用<br>  一个自定义类来对其赋值，避免重复创建多个匿名font对象（虽然java回收器会自动回收）。   </p></li></ul><pre><code>public class myFont{    public static void setmyFont(JComponent jComponent){        Font f=new Font(&quot;字体&quot;，style(int),size(int));    }} 在使用的类中调用该类的静态方法    eg:    for(int i=0;i&lt;15;i++){        myFont.setmyFont(jButton[i]);    }可以对上面十五个按钮的字体进行更改</code></pre><ul><li><p>在编写gui使用swing时,底层JFrame有一个getComponents()函数，并不能用其获取当前框架类组件数组，</p><p>  因为其返回值为Component []型，Component是与菜单不相关的 Abstract Window Toolkit 组件的抽象超类</p><p>  直接扩展类 Component 来创建一个轻量级组件。轻量级组件是与本机不透明窗口不相关的组件；而JComponent</p><p>  类就是swing包中由Component抽象类的扩展；Component属于awt包，Jcomponent属于swing包</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> JAVA图形化编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> GUI </tag>
             
         </tags>
       
