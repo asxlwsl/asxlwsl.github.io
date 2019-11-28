@@ -163,7 +163,7 @@ table td {
 @media screen and (max-width: 1024px) {
   i#toggle-sidebar,
   #sidebar {
-    position: fixed;
+    display: none;
   }
   body {
     padding-left: 0 !important;
