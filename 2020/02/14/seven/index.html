@@ -70,36 +70,33 @@ mysql -h 127.0.0.1 -u root (库名) -p 登入指定的数据库</code></pre><blo
 <li>数据定义语言(eg: <strong>create,drop,alter</strong>)</li>
 </ul>
 </blockquote>
-</li>
+<pre><code>create database school; /*创建出具库school*/
+
+showdatabases; /*显示所有数据库，等于：
+
+select database()*/
+
+use school; /*指定默认数据库*/
+
+create table student(       /*创建表*/
+    id int(10) primary key auto_increment,  /*设置主键自增*/
+    name varchar(8),
+    sex char(1),
+    age int(2),
+    score float(6,2)
+);
+
+show tables; /*显示当前库的表清单*/
+
+show columns from student; /* 显示指定表结构，等同describe student;*/
+
+show create table student;  /*显示建表sql语句（信息）*/
+
+drop table student; /*删除指定表*/
+
+drop database school;   /*删除数据库*/</code></pre></li>
 </ul>
-<pre><code>    create database school; /*创建出具库school*/
-
-    showdatabases; /*显示所有数据库，等于：
-
-    select database()*/
-
-    use school; /*指定默认数据库*/
-
-    create table student(       /*创建表*/
-        id int(10) primary key auto_increment,  /*设置主键自增*/
-        name varchar(8),
-        sex char(1),
-        age int(2),
-        score float(6,2)
-    );
-
-    show tables; /*显示当前库的表清单*/
-
-    show columns from student; /* 显示指定表结构，等同describe student;*/
-
-    show create table student;  /*显示建表sql语句（信息）*/
-
-    drop table student; /*删除指定表*/
-
-    drop database school;   /*删除数据库*/
-
-
-&gt;* 数据查询语言(eg:__select__)
+<pre><code>&gt;* 数据查询语言(eg:__select__)
 
     select * from student;
 
@@ -115,7 +112,6 @@ mysql -h 127.0.0.1 -u root (库名) -p 登入指定的数据库</code></pre><blo
 
 
 &gt;* 数据操作语言(eg:__insert,delete,update__)
-
 
     insert into student values(null,&quot;LiMing&quot;,&quot;m&quot;,19,99,5)  /*数据插入*/
 
